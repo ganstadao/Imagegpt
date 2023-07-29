@@ -10,7 +10,7 @@ import requests
 
 app = Flask(__name__)
 
-openai.api_key= "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"
+openai.api_key= "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"
 
 @app.route("/",methods=["GET","POST"])
 def index():
