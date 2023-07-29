@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>daoGPT</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color: black;
+                text-align: center;
+                margin: 0; /* 添加这一行，去掉 body 的默认边距 */
+                height: 100vh; /* 添加这一行，让 body 占据整个视口高度 */
+            }
+            .container {
+                /* 使用 Flexbox 布局 */
+                display: flex;
+                align-items: center; /* 垂直居中 */
+                justify-content: center; /* 水平居中 */
+                height: 100%;
+            }
+            h1 {
+                font-size: 60px;
+            }
+            .GPT {
+                padding-left: 10px;
+                padding-right: 10px;
+                width:100px;
+                height:50px;
+                background-color:rgb(255, 187, 0) ;
+                color:black;
+                border-radius: 15px/15px;            
+            }
+            .dao {
+                color:white;
+            }
+            p {
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="centered-block">
+                <h1><span class="dao">IMAGE </span><span class="GPT">GPT</span></h1>
+                <form action="/" method="post">
+                    <p>Please describe the image : </p>
+                    <p><input type="text" name="txt"></p>
+                    <p><input type="submit" value="Enter"></p>
+                </form>
+                <p>The reply is {{result}}</p>
+                <p><img src={{result}}></p>
+            </div>
+        </div>
+    </body>
+</html>
